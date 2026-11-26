@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas dos Alunos</title>
+</head>
+<body>
+
+    <h1>Notas dos Alunos</h1>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Aluno</th>
+            <th>Nota</th>
+            <th>Situação</th>
+        </tr>
+
+        {% for aluno in alunos %}
+        <tr>
+            <td>{{ aluno["Aluno"] }}</td>
+            <td>{{ aluno["Nota"] }}</td>
+            <td>{{ aluno["Situação"] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h2>Resultados da turma</h2>
+
+    <p>Média: {{ media }}</p>
+    <p>Maior nota: {{ maior }}</p>
+    <p>Menor nota: {{ menor }}</p>
+
+</body>
+</html>
